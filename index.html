@@ -44,6 +44,7 @@
             padding: 12px;
             background: linear-gradient(45deg, #0078d7, #00aaff);
             color: #fff;
+            font-weight: bold;
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -55,16 +56,7 @@
         }
         button img {
             height: 30px;
-        }
-        .qris-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .qris-container img {
-            max-width: 300px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 10px;
+            filter: brightness(0) invert(1); /* Tambahkan kontras pada ikon */
         }
         .highlight-note {
             text-align: center;
@@ -76,29 +68,6 @@
             border: 2px solid #f5c6cb;
             padding: 15px;
             border-radius: 10px;
-        }
-        .confirmation-note {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #b91c1c;
-            background-color: #ffebee;
-            border: 2px solid #f5c6cb;
-            padding: 15px;
-            border-radius: 10px;
-            line-height: 1.5;
-        }
-        a {
-            text-decoration: none;
-            font-size: 18px;
-            background-color: #25d366;
-            color: #fff;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 10px;
         }
     </style>
 </head>
@@ -113,53 +82,32 @@
         <div>
             <p class="section-title">📲 E-Wallet (a/n Ferdi):</p>
             <button onclick="copyToClipboard('085281629923')">
-                <img src="Logo/dana.png" alt="DANA">
+                <img src="Logo/dana.png" alt="DANA"> DANA
             </button>
             <button onclick="copyToClipboard('085752083533')">
-                <img src="Logo/ovo.png" alt="OVO">
+                <img src="Logo/ovo.png" alt="OVO"> OVO
             </button>
             <button onclick="copyToClipboard('085752083533')">
-                <img src="Logo/gopay.png" alt="GOPAY">
-            </button>
-            <button onclick="copyToClipboard('085752083533')">
-                <img src="Logo/linkaja.png" alt="LinkAja">
-            </button>
-            <button onclick="copyToClipboard('085752083533')">
-                <img src="Logo/shopeepay.png" alt="ShopeePay">
+                <img src="Logo/gopay.png" alt="GOPAY"> GoPay
             </button>
         </div>
 
-        <!-- Bank Section -->
+        <!-- Rekening Bank Section -->
         <div>
             <p class="section-title">🏦 Rekening Bank (a/n Ferdi):</p>
             <button onclick="copyToClipboard('8171066191')">
-                <img src="Logo/bca.png" alt="BCA">
+                <img src="Logo/bca.png" alt="BCA"> BCA
             </button>
             <button onclick="copyToClipboard('369901056218536')">
-                <img src="Logo/bri.png" alt="BRI">
+                <img src="Logo/bri.png" alt="BRI"> BRI
             </button>
             <button onclick="copyToClipboard('901868798115')">
-                <img src="Logo/seabank.png" alt="Seabank">
+                <img src="Logo/seabank.png" alt="SeaBank"> SeaBank
             </button>
-        </div>
-
-        <!-- QRIS Section -->
-        <div class="qris-container">
-            <p class="section-title">🔰 Payment QRIS:</p>
-            <img id="qris-image" src="qris.jpg" alt="Kode QRIS Pembayaran">
-            <br>
-            <a href="qris.jpg" download="Payment_QRIS.jpg">📥 Download / Simpan QRIS</a>
-        </div>
-
-        <!-- Confirmation -->
-        <div class="confirmation-note">
-            ⚠️ <b>Harap konfirmasi</b> ke Ferdi setelah transfer melalui
-            <a href="https://wa.me/6285752083533" target="_blank">📲 WhatsApp</a>
         </div>
     </div>
 
     <script>
-        // Fungsi Copy-to-Clipboard
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(function() {
                 alert('Nomor berhasil disalin: ' + text);
