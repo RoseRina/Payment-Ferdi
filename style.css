@@ -11,3 +11,30 @@
 h1, h2, h3, p {
     text-align: center; /* Untuk semua judul dan paragraf */
 }
+
+/* Tambahkan gaya khusus untuk tombol */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 12px;
+    background-color: #0078d7; /* Warna biru default */
+    color: #ffffff; /* Warna teks putih */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 80%; /* Lebar tombol 80% agar seimbang */
+}
+
+button:hover {
+    background-color: #005bb5; /* Warna lebih gelap saat hover */
+}
+
+button img {
+    height: 24px;
+    margin-right: 8px;
+    filter: brightness(0) invert(1); /* Membuat ikon lebih kontras */
+}
