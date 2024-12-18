@@ -38,7 +38,7 @@
         button {
             display: flex;
             align-items: center;
-            justify-content: left;
+            justify-content: center;
             width: 100%;
             margin: 10px 0;
             padding: 12px;
@@ -46,8 +46,6 @@
             color: #fff;
             border: none;
             border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -56,8 +54,7 @@
             transform: translateY(-2px);
         }
         button img {
-            height: 20px;
-            margin-right: 10px;
+            height: 30px;
         }
         .qris-container {
             text-align: center;
@@ -117,23 +114,18 @@
             <p class="section-title">📲 E-Wallet (a/n Ferdi):</p>
             <button onclick="copyToClipboard('085281629923')">
                 <img src="Logo/dana.png" alt="DANA">
-                 DANA: 085281629923 - Novia
             </button>
             <button onclick="copyToClipboard('085752083533')">
                 <img src="Logo/ovo.png" alt="OVO">
-                 OVO: 085752083533 - Ferdi
             </button>
             <button onclick="copyToClipboard('085752083533')">
                 <img src="Logo/gopay.png" alt="GOPAY">
-                 GOPAY: 085752083533 - Ferdi
             </button>
             <button onclick="copyToClipboard('085752083533')">
                 <img src="Logo/linkaja.png" alt="LinkAja">
-                 LinkAja: 085752083533 - Ferdi
             </button>
             <button onclick="copyToClipboard('085752083533')">
                 <img src="Logo/shopeepay.png" alt="ShopeePay">
-                 ShopeePay: 085752083533 - Ferdi
             </button>
         </div>
 
@@ -142,15 +134,12 @@
             <p class="section-title">🏦 Rekening Bank (a/n Ferdi):</p>
             <button onclick="copyToClipboard('8171066191')">
                 <img src="Logo/bca.png" alt="BCA">
-                BCA: 8171066191 - Ferdi
             </button>
             <button onclick="copyToClipboard('369901056218536')">
                 <img src="Logo/bri.png" alt="BRI">
-                BRI: 369901056218536 - Ferdi
             </button>
             <button onclick="copyToClipboard('901868798115')">
                 <img src="Logo/seabank.png" alt="Seabank">
-                Seabank: 901868798115 - Ferdi
             </button>
         </div>
 
@@ -178,15 +167,6 @@
                 alert('Gagal menyalin nomor: ' + err);
             });
         }
-
-        // Disable Developer Tools
-        document.addEventListener('contextmenu', (e) => e.preventDefault());
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'c' || e.key === 'C')) {
-                e.preventDefault();
-                alert('Fungsi ini dinonaktifkan!');
-            }
-        });
     </script>
 </body>
 </html>
