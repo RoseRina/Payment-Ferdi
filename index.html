@@ -25,6 +25,19 @@
             text-align: center;
             color: #444;
         }
+        .highlight-note {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #b91c1c;
+            background-color: #ffebee;
+            border: 2px solid #f5c6cb;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            line-height: 1.5;
+        }
         .section-title {
             font-size: 18px;
             font-weight: bold;
@@ -48,53 +61,19 @@
         button:hover {
             background-color: #007ba7;
         }
-        .qris-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .qris-container img {
-            max-width: 300px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .confirmation-note {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #d9534f;
-            background-color: #f9eaea;
-            border: 1px solid #f5c6cb;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .confirmation-note span {
-            color: #c9302c;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Daftar Pembayaran</h1>
+        
+        <!-- Catatan Menonjol -->
+        <div class="highlight-note">
+            ⚠️ <b>Catatan:</b> Cukup <u>tekan</u> nomor atau rekening yang ingin Anda gunakan, <br>
+            maka nomor akan otomatis <u>tersalin</u> ke clipboard Anda!
+        </div>
 
         <!-- E-Wallet Section -->
-        <div class="highlight-note" style="
-    text-align: center;
-    margin: 20px auto;
-    font-size: 16px;
-    font-weight: bold;
-    color: #b91c1c;
-    background-color: #ffebee;
-    border: 2px solid #f5c6cb;
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    line-height: 1.5;">
-    ⚠️ <b>Catatan:</b> Cukup <u>tekan</u> nomor atau rekening yang ingin Anda gunakan, <br>
-    maka nomor akan otomatis <u>tersalin</u> ke clipboard Anda!
-</div>
-
         <div>
             <p class="section-title">📲 E-Wallet (a/n Ferdi):</p>
             <button onclick="copyToClipboard('085281629923')">◼️ DANA: 085281629923 - Novia</button>
@@ -105,22 +84,6 @@
         </div>
 
         <!-- Bank Section -->
-        <div class="highlight-note" style="
-    text-align: center;
-    margin: 20px auto;
-    font-size: 16px;
-    font-weight: bold;
-    color: #b91c1c;
-    background-color: #ffebee;
-    border: 2px solid #f5c6cb;
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    line-height: 1.5;">
-    ⚠️ <b>Catatan:</b> Cukup <u>tekan</u> nomor atau rekening yang ingin Anda gunakan, <br>
-    maka nomor akan otomatis <u>tersalin</u> ke clipboard Anda!
-</div>
-
         <div>
             <p class="section-title">🏦 Rekening Bank (a/n Ferdi):</p>
             <button onclick="copyToClipboard('8171066191')">🏧 BCA: 8171066191 - Ferdi</button>
@@ -129,44 +92,19 @@
         </div>
 
         <!-- QRIS Section -->
-        <div class="qris-container">
-            <p class="section-title">🔰 Payment QRIS:</p>
-            <!-- Gambar QRIS lokal -->
-            <img id="qris-image" src="qris.jpg" alt="Kode QRIS Pembayaran">
-            <br>
-            <!-- Tombol Download -->
-            <a href="qris.jpg" download="Payment_QRIS.jpg">
-                <button>📥 Download / Simpan QRIS</button>
+        <div class="section-title">🔰 Payment QRIS:</div>
+        <div style="text-align: center; margin-top: 10px;">
+            <img src="qris.jpg" alt="Kode QRIS Pembayaran" style="max-width: 300px; width: 100%; border-radius: 8px;">
+            <br><br>
+            <a href="qris.jpg" download="QRIS_Pembayaran">
+                <button>📥 Download QRIS</button>
             </a>
-<div class="confirmation-note" style="
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #b91c1c;
-    background-color: #ffebee;
-    border: 2px solid #f5c6cb;
-    padding: 15px 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-    line-height: 1.5;">
-    ⚠️ <b>Harap konfirmasi</b> ke Ferdi setelah melakukan transfer melalui <br>
-    <a href="https://wa.me/6285752083533" target="_blank" style="
-        display: inline-block;
-        margin-top: 10px;
-        text-decoration: none;
-        font-size: 18px;
-        background-color: #25D366;
-        color: #fff;
-        padding: 12px 25px;
-        border-radius: 5px;
-        font-weight: bold;">
-        📲 Konfirmasi via WhatsApp
-    </a>
-</div>
+        </div>
+    </div>
 
+    <!-- JavaScript -->
     <script>
-        // Fungsi Copy-to-Clipboard
+        // Fungsi Salin ke Clipboard
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(function() {
                 alert('Nomor berhasil disalin: ' + text);
