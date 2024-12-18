@@ -115,7 +115,9 @@ a {
 .modern-note .highlight {
     color: #ffdd57;
     font-weight: bold;
+    padding: 0 4px; /* Tambahkan padding kiri dan kanan */
 }
+
 
 .highlight-note {
     text-align: center;
@@ -127,4 +129,8 @@ a {
     border: 1px solid #f5c6cb;
     padding: 10px;
     border-radius: 10px;
+}
+
+.modern-note {
+    text-align: center;
 }
