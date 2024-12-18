@@ -38,3 +38,9 @@ button img {
     margin-right: 8px;
     filter: brightness(0) invert(1); /* Membuat ikon lebih kontras */
 }
+
+button img[alt="DANA"] {
+    filter: none; /* Hilangkan efek filter */
+    opacity: 1; /* Pastikan ikon terlihat penuh */
+    mix-blend-mode: normal; /* Hindari mode campuran warna */
+}
