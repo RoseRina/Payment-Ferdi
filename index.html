@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             color: #333;
+            user-select: none; /* Mencegah pemilihan teks */
         }
         .container {
             max-width: 800px;
@@ -27,22 +28,11 @@
             margin-bottom: 10px;
         }
         .section-title {
-            text-align: center; /* Menengahkan judul */
+            text-align: center;
             font-size: 20px;
             font-weight: bold;
             margin: 20px 0 10px;
             color: #555;
-        }
-        .highlight-note {
-            background-color: #ffe4e4;
-            color: #d9534f;
-            border: 1px solid #f5c6cb;
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 14px;
-            font-weight: bold;
         }
         button {
             width: 100%;
@@ -67,37 +57,48 @@
             max-width: 280px;
             border-radius: 8px;
         }
-        .confirm-note {
-            text-align: center;
-            background-color: #f0f8ff;
-            color: #2c5f85;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-        .confirm-note a {
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            background-color: #25D366;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .confirm-note a:hover {
-            background-color: #20b456;
-        }
     </style>
+    <script>
+        // Mencegah klik kanan
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert('Klik kanan dinonaktifkan!');
+        });
+
+        // Mencegah kombinasi Ctrl+U, Ctrl+S, Ctrl+Shift+I
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'U' || e.key === 'S')) {
+                alert('Akses ini dinonaktifkan!');
+                e.preventDefault();
+            }
+            if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+                alert('Inspect Element dinonaktifkan!');
+                e.preventDefault();
+            }
+            if (e.key === 'F12') {
+                alert('Inspect Element dinonaktifkan!');
+                e.preventDefault();
+            }
+        });
+
+        // Mencegah pemilihan teks
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+        });
+
+        // Fungsi Copy-to-Clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function () {
+                alert('Nomor berhasil disalin: ' + text);
+            }).catch(function (err) {
+                alert('Gagal menyalin nomor: ' + err);
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Daftar Pembayaran</h1>
-        <div class="highlight-note">
-            ⚠️ <b>Catatan:</b> Klik nomor untuk menyalin otomatis ke clipboard!
-        </div>
-
         <p class="section-title">📲 E-Wallet (a/n Ferdi):</p>
         <button onclick="copyToClipboard('085281629923')">DANA: 085281629923 - Novia</button>
         <button onclick="copyToClipboard('085752083533')">OVO: 085752083533 - Ferdi</button>
@@ -113,27 +114,7 @@
         <div class="qris-container">
             <p class="section-title">🔰 Payment QRIS:</p>
             <img src="qris.jpg" alt="Kode QRIS Pembayaran">
-            <br>
-            <a href="qris.jpg" download="Payment_QRIS.jpg">
-                <button>📥 Download QRIS</button>
-            </a>
-        </div>
-
-        <div class="confirm-note">
-            ⚠️ Harap konfirmasi transfer ke Ferdi melalui:
-            <br>
-            <a href="https://wa.me/6285752083533" target="_blank">📲 Konfirmasi via WhatsApp</a>
         </div>
     </div>
-
-    <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Nomor berhasil disalin: ' + text);
-            }).catch(err => {
-                alert('Gagal menyalin nomor: ' + err);
-            });
-        }
-    </script>
 </body>
 </html>
