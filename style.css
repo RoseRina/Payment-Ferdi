@@ -1,46 +1,30 @@
-.section-title {
-    font-size: 18px;
+/* Modern Note Container */
+.modern-note {
+    display: flex; /* Menjadikan elemen dalam baris */
+    align-items: center; /* Vertikal rata tengah */
+    justify-content: center; /* Horizontal rata tengah */
+    background: linear-gradient(135deg, #0078d7, #00c6ff);
+    color: #fff;
+    padding: 12px 20px; /* Padding lebih besar untuk keseimbangan */
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 15px auto;
+    text-align: center;
     font-weight: bold;
-    margin-top: 20px;
-    color: #555;
-    text-align: center; /* Memastikan teks rata tengah */
-    display: block; /* Memastikan elemen ditampilkan sebagai blok */
-    width: 100%; /* Memastikan mengambil lebar penuh */
+    max-width: 600px;
+    line-height: 1.5; /* Spasi antar baris */
 }
 
-h1, h2, h3, p {
-    text-align: center; /* Untuk semua judul dan paragraf */
+/* Icon pada Modern Note */
+.modern-note .icon {
+    font-size: 20px;
+    margin-right: 8px; /* Jarak antara ikon dan teks */
 }
 
-/* Tambahkan gaya khusus untuk tombol */
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px auto;
-    padding: 12px;
-    background-color: #0078d7; /* Warna biru default */
-    color: #ffffff; /* Warna teks putih */
+/* Highlight Spesifik pada Kata "Logo" */
+.modern-note .highlight {
+    color: #ffdd57; /* Warna kuning terang */
     font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    width: 80%; /* Lebar tombol 80% agar seimbang */
-}
-
-button:hover {
-    background-color: #005bb5; /* Warna lebih gelap saat hover */
-}
-
-button img {
-    height: 24px;
-    margin-right: 8px;
-    filter: brightness(0) invert(1); /* Membuat ikon lebih kontras */
-}
-
-button img[alt="DANA"] {
-    filter: none; /* Hilangkan efek filter */
-    opacity: 1; /* Pastikan ikon terlihat penuh */
-    mix-blend-mode: normal; /* Hindari mode campuran warna */
+    margin: 0 5px; /* Menambahkan spasi di kiri dan kanan elemen */
 }
