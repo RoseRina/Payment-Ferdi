@@ -20,20 +20,18 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
         }
         h1 {
             text-align: center;
             color: #444;
             font-size: 2em;
-            margin-bottom: 10px;
         }
         .section-title {
             font-size: 20px;
             font-weight: bold;
             margin-top: 20px;
-            color: #555;
             text-align: center;
+            color: #555;
         }
         .warning-note {
             text-align: center;
@@ -59,15 +57,14 @@
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        button:hover {
-            background: linear-gradient(45deg, #0063b1, #0099dd);
-            transform: translateY(-2px);
         }
         button img {
             height: 30px;
             filter: brightness(1.5) contrast(1.2);
+        }
+        button:hover {
+            background: linear-gradient(45deg, #0063b1, #0099dd);
+            transform: translateY(-2px);
         }
         a {
             text-decoration: none;
@@ -79,6 +76,16 @@
             font-weight: bold;
             display: inline-block;
             margin-top: 10px;
+        }
+        .qris-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .qris-container img {
+            max-width: 300px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -93,7 +100,7 @@
         <div>
             <p class="section-title">📲 E-Wallet (a/n Ferdi):</p>
 
-            <!-- Tambahan Peringatan Khusus untuk DANA -->
+            <!-- Peringatan Khusus untuk DANA -->
             <div class="warning-note">
                 ⚠️ Nama akun DANA adalah <b>Novia</b>, bukan Ferdi. Harap periksa sebelum transfer.
             </div>
