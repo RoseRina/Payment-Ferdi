@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
-<link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daftar akun pembayaran Ferdi, lengkap dengan e-wallet, rekening bank, dan QRIS. Mudah untuk transfer.">
     <title>Daftar Akun Pembayaran</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -12,7 +13,6 @@
             margin: 0;
             padding: 20px;
             color: #333;
-            user-select: none;
         }
         .container {
             max-width: 750px;
@@ -67,6 +67,9 @@
             background: linear-gradient(45deg, #0063b1, #0099dd);
             transform: translateY(-2px);
         }
+        button:active {
+            transform: scale(0.95);
+        }
         a {
             text-decoration: none;
             font-size: 18px;
@@ -88,108 +91,87 @@
             border: 1px solid #ccc;
             border-radius: 10px;
         }
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            button {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-<div class="modern-note">
-    <span class="icon">⚡</span>
-    <b>Catatan:</b> Klik <span class="highlight">Logo</span> untuk menyalin ke clipboard.
-</div>
+<div class="container">
+    <h1>Daftar Akun Pembayaran</h1>
 
-
-<style>
-    .modern-note {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #0078d7, #00c6ff);
-        color: #fff;
-        padding: 12px 15px;
-        font-size: 16px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 15px auto;
-        text-align: center;
-        font-weight: bold;
-        max-width: 600px;
-    }
-
-    .modern-note .icon {
-        font-size: 20px;
-        margin-right: 10px;
-    }
-
-    .modern-note .highlight {
-        color: #ffdd57;
-        font-weight: bold;
-    }
-</style>
-
-
-        <!-- E-Wallet Section -->
-        <div>
-            <p class="section-title">📲 E-Wallet (a/n Ferdi):</p>
-
-            <!-- Peringatan Khusus untuk DANA -->
-            <div class="warning-note">
-                ⚠️ Nama akun DANA adalah <b>Novia</b>, bukan Ferdi. Harap periksa sebelum transfer.
-            </div>
-
-            <button onclick="copyToClipboard('085281629923')">
-                <img src="Logo/dana.png" alt="DANA">
-            </button>
-            <button onclick="copyToClipboard('085752083533')">
-                <img src="Logo/ovo.png" alt="OVO">
-            </button>
-            <button onclick="copyToClipboard('085752083533')">
-                <img src="Logo/gopay.png" alt="GOPAY">
-            </button>
-            <button onclick="copyToClipboard('085752083533')">
-                <img src="Logo/linkaja.png" alt="LinkAja">
-            </button>
-            <button onclick="copyToClipboard('085752083533')">
-                <img src="Logo/shopeepay.png" alt="ShopeePay">
-            </button>
-        </div>
-
-        <!-- Rekening Bank Section -->
-        <div>
-            <p class="section-title">🏦 Rekening Bank (a/n Ferdi):</p>
-            <button onclick="copyToClipboard('8171066191')">
-                <img src="Logo/bca.png" alt="BCA">
-            </button>
-            <button onclick="copyToClipboard('369901056218536')">
-                <img src="Logo/bri.png" alt="BRI">
-            </button>
-            <button onclick="copyToClipboard('901868798115')">
-                <img src="Logo/seabank.png" alt="Seabank">
-            </button>
-        </div>
-
-        <!-- QRIS Section -->
-        <div class="qris-container">
-            <p class="section-title">🔰 Payment QRIS:</p>
-            <img id="qris-image" src="qris.jpg" alt="Kode QRIS Pembayaran">
-            <br>
-            <a href="qris.jpg" download="Payment_QRIS.jpg">📥 Download / Simpan QRIS</a>
-        </div>
-
-        <!-- Confirmation -->
-        <div class="highlight-note">
-            ⚠️ <b>Harap konfirmasi</b> ke Ferdi setelah transfer melalui
-            <a href="https://wa.me/6285752083533" target="_blank">📲 WhatsApp</a>
-        </div>
+    <!-- Modern Note -->
+    <div class="modern-note">
+        <span class="icon">⚡</span>
+        <b>Catatan:</b> Klik <span class="highlight">Logo</span> untuk menyalin ke clipboard.
     </div>
 
-    <script>
-        // Fungsi Copy-to-Clipboard
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-                alert('Nomor berhasil disalin: ' + text);
-            }).catch(function(err) {
-                alert('Gagal menyalin nomor: ' + err);
-            });
-        }
-    </script>
+    <!-- E-Wallet Section -->
+    <div>
+        <p class="section-title">📲 E-Wallet (a/n Ferdi):</p>
+        <div class="warning-note">
+            ⚠️ Nama akun DANA adalah <b>Novia</b>, bukan Ferdi. Harap periksa sebelum transfer.
+        </div>
+        <button aria-label="Salin nomor DANA ke clipboard" onclick="copyToClipboard('085281629923')">
+            <img src="Logo/dana.png" alt="Logo DANA untuk transfer">
+        </button>
+        <button aria-label="Salin nomor OVO ke clipboard" onclick="copyToClipboard('085752083533')">
+            <img src="Logo/ovo.png" alt="Logo OVO untuk transfer">
+        </button>
+        <button aria-label="Salin nomor GoPay ke clipboard" onclick="copyToClipboard('085752083533')">
+            <img src="Logo/gopay.png" alt="Logo GoPay untuk transfer">
+        </button>
+        <button aria-label="Salin nomor LinkAja ke clipboard" onclick="copyToClipboard('085752083533')">
+            <img src="Logo/linkaja.png" alt="Logo LinkAja untuk transfer">
+        </button>
+        <button aria-label="Salin nomor ShopeePay ke clipboard" onclick="copyToClipboard('085752083533')">
+            <img src="Logo/shopeepay.png" alt="Logo ShopeePay untuk transfer">
+        </button>
+    </div>
+
+    <!-- Rekening Bank Section -->
+    <div>
+        <p class="section-title">🏦 Rekening Bank (a/n Ferdi):</p>
+        <button aria-label="Salin nomor BCA ke clipboard" onclick="copyToClipboard('8171066191')">
+            <img src="Logo/bca.png" alt="Logo BCA untuk transfer">
+        </button>
+        <button aria-label="Salin nomor BRI ke clipboard" onclick="copyToClipboard('369901056218536')">
+            <img src="Logo/bri.png" alt="Logo BRI untuk transfer">
+        </button>
+        <button aria-label="Salin nomor SeaBank ke clipboard" onclick="copyToClipboard('901868798115')">
+            <img src="Logo/seabank.png" alt="Logo SeaBank untuk transfer">
+        </button>
+    </div>
+
+    <!-- QRIS Section -->
+    <div class="qris-container">
+        <p class="section-title">🔰 Payment QRIS:</p>
+        <img id="qris-image" src="qris.jpg" alt="Kode QRIS Pembayaran" loading="lazy">
+        <br>
+        <a href="qris.jpg" download="Payment_QRIS.jpg">📥 Download / Simpan QRIS</a>
+    </div>
+
+    <!-- Confirmation -->
+    <div class="highlight-note">
+        ⚠️ <b>Harap konfirmasi</b> ke Ferdi setelah transfer melalui
+        <a href="https://wa.me/6285752083533?text=Halo%20Ferdi,%20saya%20telah%20melakukan%20transfer.%20Berikut%20bukti%20transaksi%20saya." target="_blank">📲 WhatsApp</a>
+    </div>
+</div>
+
+<script>
+    // Fungsi Copy-to-Clipboard
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            alert('Nomor berhasil disalin: ' + text);
+        }).catch(function(err) {
+            alert('Gagal menyalin nomor: ' + err);
+        });
+    }
+</script>
 </body>
 </html>
