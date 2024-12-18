@@ -36,7 +36,9 @@
             text-align: center;
         }
         button {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: left;
             width: 100%;
             margin: 10px 0;
             padding: 12px;
@@ -52,6 +54,10 @@
         button:hover {
             background: linear-gradient(45deg, #0063b1, #0099dd);
             transform: translateY(-2px);
+        }
+        button img {
+            height: 20px;
+            margin-right: 10px;
         }
         .qris-container {
             text-align: center;
@@ -109,19 +115,43 @@
         <!-- E-Wallet Section -->
         <div>
             <p class="section-title">📲 E-Wallet (a/n Ferdi):</p>
-            <button onclick="copyToClipboard('085281629923')">◼️ DANA: 085281629923 - Novia</button>
-            <button onclick="copyToClipboard('085752083533')">◼️ OVO: 085752083533 - Ferdi</button>
-            <button onclick="copyToClipboard('085752083533')">◼️ GOPAY: 085752083533 - Ferdi</button>
-            <button onclick="copyToClipboard('085752083533')">◼️ LinkAja: 085752083533 - Ferdi</button>
-            <button onclick="copyToClipboard('085752083533')">◼️ ShopeePay: 085752083533 - Ferdi</button>
+            <button onclick="copyToClipboard('085281629923')">
+                <img src="Logo/logo-dana.png" alt="DANA">
+                ◼️ DANA: 085281629923 - Novia
+            </button>
+            <button onclick="copyToClipboard('085752083533')">
+                <img src="Logo/logo-ovo.png" alt="OVO">
+                ◼️ OVO: 085752083533 - Ferdi
+            </button>
+            <button onclick="copyToClipboard('085752083533')">
+                <img src="Logo/logo-gopay.png" alt="GOPAY">
+                ◼️ GOPAY: 085752083533 - Ferdi
+            </button>
+            <button onclick="copyToClipboard('085752083533')">
+                <img src="Logo/logo-linkaja.png" alt="LinkAja">
+                ◼️ LinkAja: 085752083533 - Ferdi
+            </button>
+            <button onclick="copyToClipboard('085752083533')">
+                <img src="Logo/logo-shopeepay.png" alt="ShopeePay">
+                ◼️ ShopeePay: 085752083533 - Ferdi
+            </button>
         </div>
 
         <!-- Bank Section -->
         <div>
             <p class="section-title">🏦 Rekening Bank (a/n Ferdi):</p>
-            <button onclick="copyToClipboard('8171066191')">🏧 BCA: 8171066191 - Ferdi</button>
-            <button onclick="copyToClipboard('369901056218536')">🏧 BRI: 369901056218536 - Ferdi</button>
-            <button onclick="copyToClipboard('901868798115')">🏧 Seabank: 901868798115 - Ferdi</button>
+            <button onclick="copyToClipboard('8171066191')">
+                <img src="Logo/logo-bca.png" alt="BCA">
+                🏧 BCA: 8171066191 - Ferdi
+            </button>
+            <button onclick="copyToClipboard('369901056218536')">
+                <img src="Logo/logo-bri.png" alt="BRI">
+                🏧 BRI: 369901056218536 - Ferdi
+            </button>
+            <button onclick="copyToClipboard('901868798115')">
+                <img src="Logo/logo-seabank.png" alt="Seabank">
+                🏧 Seabank: 901868798115 - Ferdi
+            </button>
         </div>
 
         <!-- QRIS Section -->
