@@ -1,0 +1,13 @@
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #555;
+    text-align: center; /* Memastikan teks rata tengah */
+    display: block; /* Memastikan elemen ditampilkan sebagai blok */
+    width: 100%; /* Memastikan mengambil lebar penuh */
+}
+
+h1, h2, h3, p {
+    text-align: center; /* Untuk semua judul dan paragraf */
+}

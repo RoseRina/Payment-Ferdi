@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun Pembayaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            user-select: none;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #555;
+            text-align: center;
+        }
+        button {
+            display: inline-block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #007ba7;
+        }
+        .qris-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .qris-container img {
+            max-width: 300px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Pembayaran</h1>
+
+        <!-- E-Wallet Section -->
+        <div>
+            <p class="section-title">📲 E-Wallet (a/n Ferdi):</p>
+            <button onclick="copyToClipboard('085281629923')">◼️ DANA: 085281629923 - Novia</button>
+            <button onclick="copyToClipboard('085752083533')">◼️ OVO: 085752083533 - Ferdi</button>
+            <button onclick="copyToClipboard('085752083533')">◼️ GOPAY: 085752083533 - Ferdi</button>
+            <button onclick="copyToClipboard('085752083533')">◼️ LinkAja: 085752083533 - Ferdi</button>
+            <button onclick="copyToClipboard('085752083533')">◼️ ShopeePay: 085752083533 - Ferdi</button>
+        </div>
+
+        <!-- Bank Section -->
+        <div>
+            <p class="section-title">🏦 Rekening Bank (a/n Ferdi):</p>
+            <button onclick="copyToClipboard('8171066191')">🏧 BCA: 8171066191 - Ferdi</button>
+            <button onclick="copyToClipboard('369901056218536')">🏧 BRI: 369901056218536 - Ferdi</button>
+            <button onclick="copyToClipboard('901868798115')">🏧 Seabank: 901868798115 - Ferdi</button>
+        </div>
+
+        <!-- QRIS Section -->
+        <div class="qris-container">
+            <p class="section-title">🔰 Payment QRIS:</p>
+            <!-- Gambar QRIS lokal -->
+            <img id="qris-image" src="qris.jpg" alt="Kode QRIS Pembayaran">
+            <br>
+            <!-- Tombol Download -->
+            <a href="qris.jpg" download="Payment_QRIS.jpg">
+                <button>📥 Download / Simpan QRIS</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi Copy-to-Clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Nomor berhasil disalin: ' + text);
+            }).catch(function(err) {
+                alert('Gagal menyalin nomor: ' + err);
+            });
+        }
+    </script>
+</body>
+</html>
