@@ -1,0 +1,136 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    user-select: none;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 2em;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}
+
+.warning-note {
+    text-align: center;
+    margin: 15px auto;
+    font-size: 14px;
+    font-weight: bold;
+    color: #d9534f;
+    background-color: #fbe4e4;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    background: linear-gradient(45deg, #0078d7, #00aaff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button img {
+    height: 30px;
+    filter: brightness(1.5) contrast(1.2);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0063b1, #0099dd);
+    transform: translateY(-2px);
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.qris-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qris-container img {
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.modern-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0078d7, #00c6ff);
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 15px auto;
+    text-align: center;
+    font-weight: bold;
+    max-width: 600px;
+}
+
+.modern-note .icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.modern-note .highlight {
+    color: #ffdd57;
+    font-weight: bold;
+    padding: 0 4px; /* Tambahkan padding kiri dan kanan */
+}
+
+
+.highlight-note {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #d9534f;
+    background-color: #fbe4e4;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.modern-note {
+    text-align: center;
+}
